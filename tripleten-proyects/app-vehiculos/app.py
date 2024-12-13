@@ -13,26 +13,12 @@ if graph_button:
     bar1 = px.bar(car_data, x = "model", title = "Modelo", labels = {"model":"Modelo"})
     st.plotly_chart(bar1, use_container_width=True)
 
-graph_button = st.button("Gráfica de barras sobre el año del modelo de los vehículos")
-
-if graph_button:
-    st.write("Creación de una gráfica de barras para el conjunto de datos de anuncios de venta de coches sobre el año del modelo de los vehículos")
-    bar2 = px.bar(car_data, x = "model_year", title = "Año del modelo", labels = {"model_year":"Año"})
-    st.plotly_chart(bar2, use_container_width=True)
-
 graph_button = st.button("Gráfica de barras sobre la condición en la que se encuentra cada vehículo")
 
 if graph_button:
     st.write("Creación de una gráfica de barras para el conjunto de datos de anuncios de venta de coches sobre la condición en la que se encuentra cada vehículo")
     bar3 = px.bar(car_data, x = "condition", title = "Condición del vehículo", labels = {"condition":"Condición"})
     st.plotly_chart(bar3, use_container_width=True)
-
-graph_button = st.button("Gráfica de barras sobre número de cilindros de los vehículos")
-
-if graph_button:
-    st.write("Creación de una gráfica de barras para el conjunto de datos de anuncios de venta de coches sobre el número de cilindros de los vehículos")
-    bar4 = px.bar(car_data, x = "cylinders", title = "Número de cilindros", labels = {"cylinders":"No. Cilindros"})
-    st.plotly_chart(bar4, use_container_width=True)
 
 graph_button = st.button("Gráfica de barras sobre el tipo de combustible que utiliza cada vehículo")
 
