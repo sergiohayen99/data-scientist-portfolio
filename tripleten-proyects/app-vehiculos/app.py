@@ -76,13 +76,6 @@ if graph_button:
     hist2 = px.hist(car_data, x = "odometer", title = "Nivel del odómetro", labels = {"odometer","Odómetro"})
     st.plotly_chart(hist2, use_container_width=True)
 
-graph_button = st.button("Histograma de los precios de los vehículos")
-
-if graph_button:
-    st.write("Creación de un histograma para el conjunto de datos de anuncios de venta de coches sobre los precios de los vehículos")
-    hist1 = px.hist(car_data, x = "price", title = "Precio del vehículo", labels = {"price":"Precio"})
-    st.plotly_chart(hist1, use_container_width=True)
-
 graph_button = st.button("Histograma del tiempo que lleva el vehículo en la lista")
 
 if graph_button:
@@ -101,12 +94,12 @@ graph_button = st.button("Gráfico de dispersión entre el precio y el nivel del
 
 if graph_button:
     st.write("Creación de una gráfica de dispersión para el conjunto de datos de anuncios de venta de coches entre el precio y el nivel del odómetro de los vehículos")
-    scatter2 = px.scatter(car_data, x = "odometer", y = "price", title = "Comparativa entre nivel del odómetro y el precio de los vehículos")
+    scatter2 = px.scatter(car_data, x = "odometer", y = "price", title = "Comparativa entre nivel del odómetro y el odómetro de los vehículos")
     st.plotly_chart(scatter2, use_container_width=True)
 
 graph_button = st.button("Gráfico de dispersión entre el precio y el número de días que el vehículo ha estado en la lista")
 
 if graph_button:
     st.write("Creación de una gráfica de dispersión para el conjunto de datos de anuncios de venta de coches entre el precio y el número de días que el vehículo ha estado en la lista")
-    scatter3 = px.scatter(car_data, x = "days_listed", y = "price", title = "Comparativa entre el numero de días en la lista y el precio de los vehículos")
+    scatter3 = px.scatter(car_data, x = "days_listed", y = "price", title = "Comparativa entre el numero de días en la lista y el número de días en la lista")
     st.plotly_chart(scatter3, use_container_width=True)
